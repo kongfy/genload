@@ -18,7 +18,7 @@ def simple(request):
     t = Decimal(1.0)/Decimal(4.0)
     p = Decimal(1.0)
 
-    for i in range(1024):
+    for i in range(2048):
         at = Decimal((a+b)/2)
         bt = Decimal(math.sqrt(a*b))
         tt = Decimal(t - p*(a-at)**2)
@@ -29,4 +29,4 @@ def simple(request):
     my_pi = (a+b)**2/(4*t)
     accuracy = 100*(Decimal(math.pi)-my_pi)/my_pi
 
-    return HttpResponse('')
+    return HttpResponse(my_pi)
