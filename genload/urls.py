@@ -17,4 +17,5 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^cpu/', include('cpu.urls')),
+    url(r'^disk/', include('disk.urls')),
 ]
